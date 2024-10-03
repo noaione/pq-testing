@@ -1,0 +1,17 @@
+[package]
+name = "pq-testing"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Post Quantum Cryptography
+oqs = { git = "https://github.com/mikelodder7/liboqs-rust.git", rev = "6c8c65ceb7b1ea515a4b44c5da3d5726a87ff9be", default-features = false, features = ["vendored", "non_portable", "serde"] }
+oqs-sys = { git = "https://github.com/mikelodder7/liboqs-rust.git", rev = "6c8c65ceb7b1ea515a4b44c5da3d5726a87ff9be", default-features = false, features = ["kems", "sigs", "vendored"] }
+
+# Tooling
+base64 = "0.22.1"
+uuid = { version = "1.10.0", features = ["v4"] }
+
+# Serde
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
